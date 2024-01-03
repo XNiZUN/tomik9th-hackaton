@@ -1,0 +1,43 @@
+.slider {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  transform-style: preserve-3d;
+  animation: rotate 30s linear infinite;
+}
+@keyframes rotate {
+  0% {
+    transform: perspective(1600px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(1600px) rotateY(720deg);
+  }
+}
+.slider span {
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  overflow: hidden;
+}
+.slider span img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  transition: 2s;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  color: #ffff00;
+}
+@font-face {
+  font-family: Monoton;
+  src: url(/fonts/Monoton-Regular.ttf);
+}
+.menu {
+  font-family: Monoton;
+}
